@@ -43,15 +43,11 @@ game.States.preload = function() {
 
 game.States.menu = function() {
 	this.create = function() {
-		var bg = game.add.image(GAME_WIDTH/2, GAME_HEIGHT/4, 'fbg'); //当作背景的tileSprite 
-		bg.scale.setTo(33, 33)
-		//var ground = game.add.tileSprite(0, game.height - 112, game.width, 112, 'ground').autoScroll(-100, 0); //当作地面的tileSprite
-		//bg.autoScroll(-10, 0); //让背景动起来
-		//ground.autoScroll(-100, 0); //让地面动起来
+		var bg = game.add.image(0, 0, 'bg'); //当作背景的tileSprite 
+		//bg.scale.setTo(0.8,0.8)
+		//bg.anchor.set(0.5)
 
 		bashen = game.add.sprite(40, 40, 'bashen');
-    	bashen.scale.set(25.0);
-    	bashen.play(true);
     	bashen.animations.add('run');
     	bashen.animations.play('run', 15, true);
 
@@ -59,9 +55,11 @@ game.States.menu = function() {
 		game.stick = game.pad.addStick(0, 0, 100, 'generic');
 		game.stick.alignBottomLeft(10);
 		game.stick.fixedToCamera = true;
+		game.stick.baseSprite.scale.setTo(1,1)
 
 		game.buttonA = game.pad.addButton(20, GAME_HEIGHT - 50, 'generic', 'button1-up', 'button1-down');
 		game.buttonA.alignBottomRight(20)
+		game.buttonA.sprite.scale.setTo(2,2)
 		//this.buttonA.onDown.add(this.fire, this);
 	}
 }
