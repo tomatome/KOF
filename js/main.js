@@ -59,7 +59,7 @@ game.States.menu = function() {
 
 		game.buttonA = game.pad.addButton(20, GAME_HEIGHT - 50, 'generic', 'button1-up', 'button1-down');
 		game.buttonA.alignBottomRight(20)
-		game.buttonA.sprite.scale.setTo(2,2)
+		game.buttonA.sprite.scale.setTo(1,1)
 		//this.buttonA.onDown.add(this.fire, this);
 	}
 }
