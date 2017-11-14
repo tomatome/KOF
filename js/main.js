@@ -43,9 +43,10 @@ game.States.preload = function() {
 
 game.States.menu = function() {
 	this.create = function() {
-		var bg = game.add.image(0, 0, 'bg'); //当作背景的tileSprite 
-		//bg.scale.setTo(0.8,0.8)
-		//bg.anchor.set(0.5)
+		var bg = game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
+		bg.width = game.width
+		bg.height = game.height
+		bg.anchor.set(0.5)
 
 		bashen = game.add.sprite(40, 40, 'bashen');
     	bashen.animations.add('run');
