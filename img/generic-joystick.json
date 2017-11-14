@@ -1,0 +1,75 @@
+{"frames": [
+{
+	"filename": "base",
+	"frame": {"x":2,"y":2,"w":88,"h":88}, 
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":88},
+	"sourceSize": {"w":88,"h":88}
+},
+{
+	"filename": "button1-down",
+	"frame": {"x":142,"y":2,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "button1-up",
+	"frame": {"x":142,"y":45,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "button2-down",
+	"frame": {"x":182,"y":2,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "button2-up",
+	"frame": {"x":222,"y":2,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "button3-down",
+	"frame": {"x":182,"y":45,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "button3-up",
+	"frame": {"x":222,"y":45,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
+	"sourceSize": {"w":40,"h":40}
+},
+{
+	"filename": "stick",
+	"frame": {"x":89,"y":2,"w":52,"h":52}, 
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":52},
+	"sourceSize": {"w":52,"h":52}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "generic-joystick.png",
+	"format": "RGBA8888",
+	"size": {"w":682,"h":228},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e9879c3113ba01e8301c41ff8a522461:27f6351bd7b0a375a2a8ff5a01af291c:39ee24d5067dbc6be070854b489a5e77$"
+}
+}
