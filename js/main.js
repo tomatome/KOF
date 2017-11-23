@@ -1,10 +1,9 @@
 GAME_WIDTH = window.innerWidth;
 GAME_HEIGHT = window.innerHeight;
 
+var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'game');
 var s=document.getElementById("game");
 Phaser.myScaleManager=new MyScaleManager(s)
-
-var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'game');
 Phaser.myScaleManager.boot()
 game.States = {};
 game.States.boot = function() {
@@ -13,7 +12,7 @@ game.States.boot = function() {
         game.physics.startSystem(Phaser.Physics.ARCADE);
 		game.scale.pageAlignHorizontally = true;
 		game.scale.pageAlignVertically = true;
-		game.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
+		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 		
 	};
 	this.create = function() {
@@ -43,15 +42,12 @@ game.States.preload = function() {
 
 game.States.menu = function() {
 	this.create = function() {
-		var bg = game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
-		bg.width = game.width
-		bg.height = game.height
-		bg.anchor.set(0.5)
+		game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
 
-		bashen = game.add.sprite(40, 40, 'bashen');
+		/*bashen = game.add.sprite(40, 40, 'bashen');
     	bashen.animations.add('run');
     	bashen.animations.play('run', 15, true);
-
+*/
 		game.pad = game.plugins.add(Phaser.VirtualJoystick);
 		game.stick = game.pad.addStick(0, 0, 100, 'generic');
 		game.stick.alignBottomLeft(10);
