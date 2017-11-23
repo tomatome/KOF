@@ -1,7 +1,7 @@
 GAME_WIDTH = window.innerWidth;
 GAME_HEIGHT = window.innerHeight;
 
-var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'game');
+var game = new Phaser.Game(window.innerHeight, window.innerWidth, Phaser.CANVAS, 'game');
 var s=document.getElementById("game");
 Phaser.myScaleManager=new MyScaleManager(s)
 Phaser.myScaleManager.boot()
@@ -39,15 +39,17 @@ game.States.preload = function() {
 		game.state.start('menu'); //当以上所有资源都加载完成后就可以进入menu游戏菜单场景了
 	}
 }
+function action() {
+	bashen.animations.play('run', 15, true);
+}
 
 game.States.menu = function() {
 	this.create = function() {
 		game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
 
-		/*bashen = game.add.sprite(40, 40, 'bashen');
+		bashen = game.add.sprite(40, 40, 'bashen');
     	bashen.animations.add('run');
-    	bashen.animations.play('run', 15, true);
-*/
+
 		game.pad = game.plugins.add(Phaser.VirtualJoystick);
 		game.stick = game.pad.addStick(0, 0, 100, 'generic');
 		game.stick.alignBottomLeft(10);
@@ -57,7 +59,7 @@ game.States.menu = function() {
 		game.buttonA = game.pad.addButton(20, GAME_HEIGHT - 50, 'generic', 'button1-up', 'button1-down');
 		game.buttonA.alignBottomRight(20)
 		game.buttonA.sprite.scale.setTo(1,1)
-		//this.buttonA.onDown.add(this.fire, this);
+		game.buttonA.onDown.add(action, this);
 	}
 }
 
