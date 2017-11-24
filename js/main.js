@@ -45,7 +45,9 @@ function action() {
 
 game.States.menu = function() {
 	this.create = function() {
-		game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
+		var bg = game.add.sprite(0, 0, 'bg'); //当作背景的tileSprite 
+		bg.width = game.width
+		bg.height = game.height
 
 		bashen = game.add.sprite(40, 40, 'bashen');
     	bashen.animations.add('run');
